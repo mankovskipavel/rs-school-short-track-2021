@@ -12,12 +12,21 @@
  */
 
 class Queue {
-  get size() {
-    throw new Error('Not implemented');
+  constructor(value, next) {
+    console.log('create new Queue');
+    this.value = value;
+    this.next = next;
+    console.log(this);
   }
 
-  enqueue(/* element */) {
-    throw new Error('Not implemented');
+  enqueue(element) {
+    console.log('this.nod');
+    console.log(this);
+    this.value = element;
+    const node = new Queue(null, this);
+    console.log('this.nod2');
+    console.log(this);
+    return node;
   }
 
   dequeue() {
